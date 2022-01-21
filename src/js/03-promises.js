@@ -42,17 +42,15 @@ function creatPromisesChaning( {startDelay, delay, number} ) {
 
   setTimeout(() => {
     for (let i = 0; i < number; i += 1) { 
-
-      createPromise(i, delay)
-         .then(result => Notify.success(result))
-        .catch(error => Notify.failure(error));
       
-        
+      // console.log(i, delay);
+        createPromise(i, delay)
+          .then(result => Notify.success(result))
+          .catch(error => Notify.failure(error));
+         
     };
 
   }, startDelay)
-
-  
 
 };
 
@@ -63,13 +61,14 @@ function createPromise(position, delay) {
     setTimeout(() => {
       
       if (shouldResolve) { 
-        resolve(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        resolve(`✅ Fulfilled promise ${position + 1} in ${delay}ms`);
       }
 
       else {
-        reject(`❌ Rejected promise ${position} in ${delay}ms`);
-      }  
-    }, delay)
+        reject(`❌ Rejected promise ${position + 1} in ${delay}ms`);
+      } 
+      // console.log(delay * position);
+    }, delay * position)
    });
 };
 
