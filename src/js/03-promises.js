@@ -30,15 +30,6 @@ function getInputValue(event) {
 
 function creatPromisesChaning( {startDelay, delay, number} ) { 
   
-  
-  // let totalDelay = 0;
-
-  // if (startDelay >= delay) {
-  //   totalDelay = startDelay - delay;
-  // }
-  // else {
-  //   totalDelay = delay - startDelay;
-  // };
 
   setTimeout(() => {
     for (let i = 0; i < number; i += 1) { 
