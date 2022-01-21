@@ -5,4 +5,4 @@ var t,o=arguments[3];!function(o,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=require("notiflix/build/notiflix-notify-aio");const t=document.querySelector(".form"),r=document.querySelector(".form button");function n(e){e.preventDefault();const{elements:{delay:t,step:r,amount:n}}=e.currentTarget;if(""!==t.value&&""!==r.value&&""!==n.value){u({startDelay:`${t.value}`,delay:`${r.value}`,number:`${n.value}`})}else window.alert("Все поля должны быть заполнены");e.currentTarget.reset()}function u({startDelay:t,delay:r,number:n}){setTimeout(()=>{for(let t=0;t<n;t+=1)o(t,r).then(t=>e.Notify.success(t)).catch(t=>e.Notify.failure(t))},t)}function o(e,t){return new Promise((r,n)=>{const u=Math.random()>.3;setTimeout(()=>{u?r(`✅ Fulfilled promise ${e+1} in ${t}ms`):n(`❌ Rejected promise ${e+1} in ${t}ms`)},t*e)})}t.addEventListener("submit",n);
 },{"notiflix/build/notiflix-notify-aio":"MeeU"}]},{},["GyVV"], null)
-//# sourceMappingURL=/goit-js-hw-09/03-promises.1bd73b4b.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.f1314f1c.js.map
